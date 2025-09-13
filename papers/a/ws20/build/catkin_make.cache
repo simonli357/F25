@@ -1,0 +1,2 @@
+ddynamic_reconfigure:occupancy:realsense2_camera
+-DCATKIN_ENABLE_TESTING=False -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=14 -DCMAKE_CXX_STANDARD_REQUIRED=ON -DCATKIN_DEVEL_PREFIX=/home/simonli/Downloads/ws20/devel -DCMAKE_INSTALL_PREFIX=/home/simonli/Downloads/ws20/install -G Unix Makefiles
