@@ -1,7 +1,10 @@
 - mpc
 - cbf
+- RL
+- self-supervised
 - semantic
 - inference time
+- quadruped/wheeled
 - planning
 - navigation
 - locomotion
@@ -13,3 +16,4 @@ folders:
 - navigation
 - mpc
 - mapping
+- semantic

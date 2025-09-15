@@ -1,8 +1,0 @@
-prefix=/home/simonli/Downloads/ws20/devel
-
-Name: occupancy
-Description: Description of occupancy
-Version: 0.1.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
