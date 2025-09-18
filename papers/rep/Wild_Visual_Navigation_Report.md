@@ -16,7 +16,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 
 The paper introduces **Wild Visual Navigation (WVN)**, an online, on-board system that learns **visual traversability** directly from RGB cameras during field operation. Starting with a brief human teleoperation, the robot uses **proprioceptive “traction” signals**—the discrepancy between commanded and actual velocity—to self-label what terrain is safe to cross. WVN leverages **pre-trained self-supervised visual features** (DINO-ViT and STEGO) to obtain rich per-pixel embeddings without manual labels, then trains a lightweight MLP online to predict traversability. To make this practical on embedded compute, the system includes **feature sub-sampling** (e.g., STEGO- or SLIC-based segments), **confidence estimation** via an autoencoder reconstruction loss, and **multi-camera scheduling** for wider coverage. WVN fuses predicted traversability into a standard elevation-map pipeline and drives a local planner, enabling autonomous behaviors within minutes. Real-world deployments on ANYmal quadrupeds show **rapid adaptation (<5 min)**, robustness in **high-grass and bushy** environments where geometry alone fails, **8/8 goal success** in cluttered woods after a short demo, and **kilometer-scale path following** in parks. Code, baseline models, and sample data are released to support reproducibility.
 

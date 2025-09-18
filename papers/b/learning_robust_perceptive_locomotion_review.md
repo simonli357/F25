@@ -11,7 +11,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 The paper tackles a long-standing challenge in legged robotics: using vision robustly for fast, reliable locomotion in the wild, where depth sensing often fails on snow, vegetation, water, reflective surfaces, or under poor lighting. The authors propose a learned locomotion controller that fuses exteroceptive (terrain) and proprioceptive (body/foot) inputs through an attention-gated recurrent belief encoder trained end-to-end. Training follows a privileged-learning scheme: a teacher policy learns with perfect terrain knowledge in simulation; a student policy then imitates the teacher while seeing only noisy, incomplete elevation data plus proprioception, learning to trust vision when useful and fall back to proprioception when not. Deployed zero-shot on ANYmal, the controller achieved rapid, smooth traversal across alpine, forest, underground, and urban terrains without falls, including an hour-long mountain hike at human-comparable time. Controlled tests show higher success over steps and obstacles, and higher maximum speeds and turn rates than a proprioceptive baseline. Overall, the method demonstrates that learned multi-modal fusion can deliver both speed and robustness for quadrupeds operating in challenging real-world environments.
 
 ## 3. Keywords

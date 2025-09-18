@@ -13,7 +13,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 The paper develops a practical way to construct **control invariant sets (CIS)** for discrete‑time systems whose dynamics are represented by **neural networks** (ReLU MLPs). The state space is quantized into hyperboxes and an iterative set‑recursion is applied to find a subset of the safe set that is guaranteed to be forward invariant under an admissible feedback policy. The core subproblems—one‑step returnability, set propagation through ReLU layers, and feasibility checks—are reduced to interval/box reachability and mixed‑integer linear constraints, which makes the overall procedure computationally tractable and provably **finite‑terminating**. The authors then embed the resulting CIS into a **model predictive control** (MPC) problem, yielding a controller that is **recursively feasible** and respects state and input constraints by construction. A lane‑keeping case study trains a compact NN model of the vehicle’s lateral dynamics and shows that the offline CIS synthesis converges in a manageable number of iterations, while the online mixed‑integer MPC solves in **millisecond‑scale** time and keeps the vehicle within lane and control bounds. The work demonstrates a bridge between NN modeling and certified safety through invariant sets.
 
 ## 3. Keywords

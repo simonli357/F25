@@ -17,7 +17,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 
 The paper tackles terrain classification for mobile robots operating in boreal forests—environments where snow, ice, and low light degrade camera and lidar performance. The authors release **BorealTC**, a public proprioceptive dataset recorded with a Clearpath Husky A200 that includes IMU (100 Hz), wheel odometry and motor currents (6.5 Hz) across five terrains: asphalt, flooring, ice, silty loam, and snow (≈116 min total). They evaluate two learning approaches for classification from proprioception alone: a spectrogram-based **CNN** that improves prior baselines using a Hamming window to reduce spectral leakage, and a **Mamba** state-space model that processes raw time series and scales linearly with sequence length. Using BorealTC, a prior dataset (Vulpi), and a combined set, they show that CNNs excel on smaller datasets while Mamba benefits more from additional data. Results include per-class metrics, an ablation on training-set size, and a t-SNE analysis suggesting clusters align with physical terrain properties and revealing domain shift when merging datasets. The work underscores proprioception’s robustness for winter navigation and provides open resources to spur standardized evaluations in challenging off-road settings.
 

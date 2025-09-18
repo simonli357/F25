@@ -14,7 +14,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 The paper presents an online metric-semantic mapping system for outdoor robot navigation that fuses LiDAR, camera, and IMU data to build a dense 3-D TSDF mesh with semantic labels in real time. A LiDAR-visual-inertial odometry module estimates poses, while an image segmentation network provides per-pixel class probabilities. On the GPU, the method constructs a global TSDF with a non-projective distance update and uses a recursive Bayesian update to maintain per-voxel class distributions. The resulting metric-semantic mesh supports traversability analysis that combines geometric cues (height difference, steepness, roughness) with semantics (e.g., “road,” “sidewalk,” “grass”), and the team integrates it with map-based localization and a hybrid A* planner to execute point-to-point navigation. Experiments across 24 sequences from public datasets and self-collected campus runs show the system is fast—sub-7 ms per frame on a desktop GPU—and effective at avoiding unsafe terrain like grass when semantics are considered. The authors release code and highlight future directions, including improving semantic consistency and scalability to city-scale maps.
 
 ## 3. Keywords

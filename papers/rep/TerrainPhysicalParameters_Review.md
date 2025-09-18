@@ -17,7 +17,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 
 The paper tackles a key gap in legged navigation: anticipating **non-geometric** terrain hazards (e.g., slipperiness, deformability) from vision before contact. The authors propose a two-stage, cross-modal, self-supervised framework that links real images to **simulation parameters** used to train locomotion and navigation policies. First, a **physical decoder** is trained entirely in simulation to estimate per-foothold **friction** and **stiffness** using proprioception and local terrain geometry. Deployed on a real ANYmal robot, this decoder provides labels for images gathered during operation. Second, a **visual network** (DINOv2 features + MLP) is trained online to produce dense, per-pixel predictions of friction and stiffness directly from images, together with an anomaly-based **confidence mask** (encoder–decoder reconstruction + GMM thresholding) to suppress out-of-distribution regions. Experiments show lower friction MAE than a strong baseline, accurate stiffness estimates, and robust dense predictions with good confidence masks in indoor/outdoor scenes. A “digital twin’’ analysis further supports that the predicted parameters map to sim behaviors. Overall, the method lays the groundwork for **physical-parameter-aware** locomotion and navigation by bridging simulated policy training and real-world perception through self-supervision.
 

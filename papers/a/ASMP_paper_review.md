@@ -16,7 +16,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 The paper tackles how to infer terrain *physical* properties—like friction and roughness—from color images so robots can plan better. Instead of asking humans to label these properties, the authors train a quadruped to *actively* gather labels through its own movements. In simulation, a controller (the **Active Sensing Motor Policy**, ASMP) is rewarded for actions that make friction/roughness easier to estimate from proprioception (e.g., briefly dragging or swiping a foot). The robot then walks in the real world; its proprioceptive estimates become sparse but trusted labels that supervise a vision module predicting per-pixel physics from RGB images. Separately, the authors learn task-specific cost functions in simulation that map physical parameters to performance (e.g., speed) under different operating modes such as free walking vs. dragging a payload. At test time, the vision model can run on onboard or aerial images to produce physics maps, which are converted to cost maps for A* path planning. Experiments on a Unitree Go1 show that ASMP improves friction estimation versus a passive baseline and that the learned vision model generalizes to novel viewpoints. Planned paths reflect task needs—for instance, preferring sidewalks when dragging a payload but cutting across grass during free locomotion.
 
 ## 3. Keywords

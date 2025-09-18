@@ -12,7 +12,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 The GOOSE dataset targets perception in unstructured outdoor environments, where robots must reason about diverse, non-urban terrain under changing seasons and weather. It contributes 10,000 **paired** annotations of RGB(+NIR) images and LiDAR point clouds collected from a drive-by-wire research vehicle equipped with a dense 128-channel roof LiDAR and additional sensors. The authors define a **64-class** ontology that is more fine-grained than existing off-road datasets—especially for terrain and vegetation—and release raw ROS bags, annotations, calibration information, and tools. They benchmark several state-of-the-art methods for 2D (PP-LiteSeg, DDRNet, Mask2Former) and 3D (PVKD, SPVNAS) semantic segmentation, reporting strong category-level IoU for frequent classes such as vegetation, terrain, vehicles, and sky, and weaker performance for rare or visually ambiguous classes. By standardizing labels and splits and providing multi-modal, instance-aware annotations, GOOSE aims to serve both as a learning source (pretraining/transfer) and as a common benchmark for off-road perception. The dataset is intended to catalyze robust perception and, ultimately, safer navigation in complex outdoor settings where traditional urban datasets and traversability heuristics fall short.
 
 ## 3. Keywords

@@ -13,7 +13,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 
 This paper presents **Cam2BEV**, a method to convert images from multiple vehicle-mounted cameras into a **semantically segmented bird’s-eye-view (BEV)** map that corrects the distortions introduced by classic **Inverse Perspective Mapping (IPM)**. Instead of learning from photorealistic images—which exacerbates the simulation-to-reality gap—the authors train entirely on **synthetic data** while feeding networks **semantic segmentation masks** as inputs. Two architectures are explored: (i) a **single-input DeepLabv3+** that takes a stitched, IPM-warped “homography image” and learns to fix its errors; and (ii) **uNetXST**, a multi-input U-Net variant with **Spatial Transformer** blocks that project intermediate features from each camera into a common BEV frame before fusion. The pipeline explicitly models **occlusions** by adding an “unknown/occluded” class. Trained on Virtual Test Drive (VTD) with ~33k samples and evaluated using **Mean IoU**, both approaches **substantially outperform** raw IPM; uNetXST is best overall while using fewer parameters than DeepLab-Xception. Qualitative tests on real street scenes—using a separate model to generate input semantics—show reasonable generalization to real data. Code and data are available publicly. The approach yields BEV maps suitable not only for free-space but also for **dynamic object localization** and occlusion awareness, providing a practical bridge from multi-camera perception to downstream planning.
 

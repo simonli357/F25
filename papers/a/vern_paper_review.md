@@ -14,7 +14,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 
 The paper presents VERN, a navigation system for legged robots operating in dense outdoor vegetation where traditional planners either freeze or collide because sensors flag all plants as hard obstacles. VERN learns to distinguish **pliable, traversable** vegetation (e.g., tall grass) from **non-pliable, non-traversable** obstacles (e.g., bushes, trees) using a **few-shot, siamese classifier** trained on a few hundred RGB images. At run time, camera images are split into quadrants and compared to class exemplars to obtain both a class label and a confidence score. These outputs are fused with **multi-height LiDAR cost maps** to estimate vegetation height and produce a **vegetation-aware traversability cost map** that explicitly accounts for classification confidence and height. A DWA-based local planner then prefers low-cost (pliable) regions, reduces speed in uncertain areas, and triggers **holonomic recovery behaviors** when freezing or entrapment is detected. Experiments on a Boston Dynamics Spot in multiple real-world scenarios show large gains over baselines (Spot autonomy, DWA, GA-Nav, GrASPE) in success rate, freezing rate, trajectory efficiency, and false positives. VERN demonstrates that combining lightweight few-shot perception with height-aware cost shaping and recovery behaviors enables reliable navigation through dense vegetation without requiring dangerous negative-experience training.
 

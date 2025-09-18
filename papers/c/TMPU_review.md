@@ -19,7 +19,7 @@
 
 ---
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 
 This paper presents **TMPU**, an autonomous navigation framework for ground robots operating in uneven, unstructured terrain. TMPU first builds a 3D OctoMap using LiDAR-based SLAM, then converts it into a **low-resolution 2D occupancy map** through plane fitting and analysis. Each local plane is evaluated by **slope** and **roughness** thresholds (set to a robot’s capabilities) to label traversable cells. Planning proceeds in two stages: an **A\*** search on the 2D map generates a **high-resolution traversable corridor**, after which a global path is computed using an **improved lattice planner (“H-lattice”)** that explicitly checks inter-plane **height differences** to avoid raised and negative obstacles (e.g., drop-offs) that may be missed at low resolution. A standard local planner (ROS move_base) tracks the path. Simulation studies in Gazebo across slope, step, and uneven scenes using a Scout 2.0–like platform show substantially reduced planning time compared with a prior plane-fitting approach (PUTN), and safer behavior near cliffs and unknown areas. Reported average compute-time reductions range from **57.6% to 97.1%**, with qualitative improvements in path optimality and obstacle avoidance.
 

@@ -14,7 +14,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 This paper presents **Wild Visual Navigation (WVN)**, an online self-supervised method that learns visual traversability directly in the field with only minutes of demonstration. WVN extracts dense visual embeddings from powerful, pre-trained models (DINO-ViT and STEGO) and trains a small MLP online to predict per-pixel traversability. Supervision is generated automatically from robot proprioception: discrepancies between commanded and observed velocities define a traction-based traversability score; these labels are projected into past images using a supervision/mission graph to accumulate training data while the robot moves. Confidence over unseen areas is estimated with an autoencoder-based anomaly model, allowing conservative treatment of unvisited terrain. The system supports multi-camera input via a weighted round-robin scheduler and integrates with a standard elevation-map local planner by ray-casting visual traversability into the map’s frame. The authors demonstrate rapid adaptation (<5 minutes) and closed-loop navigation in forests, parks, and indoor-to-outdoor transitions on ANYmal legged robots, including kilometer-scale path following and obstacle avoidance that outperform purely geometric methods in high grass and similar ambiguous terrain. Code, baseline weights, and sample data are released to facilitate reproduction.
 
 ## 3. Keywords

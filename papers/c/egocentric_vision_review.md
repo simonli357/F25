@@ -15,7 +15,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 This paper presents an end-to-end visual locomotion system for quadruped robots that uses only a single front-facing depth camera plus proprioception. Instead of constructing metric elevation maps or relying on pre-programmed gaits, the authors train a recurrent control policy that directly outputs joint targets from egocentric depth, enabling robust traversal of stairs, curbs, stepping stones, gaps, and uneven outdoor terrain. Training proceeds in two stages. First, a reinforcement-learning “teacher” policy learns from inexpensive scandot height probes that summarize local terrain geometry. Second, a student policy is distilled via supervised learning to operate purely from onboard sensing (depth + proprioception), using a convolutional encoder and GRU memory to retain information about terrain that passes out of view. Experiments in simulation and on a Unitree A1 robot show large gains over “blind” policies and approaches that depend on noisy elevation maps. The method achieves near-perfect success on stairs, curbs, and gaps, and high success on stepping stones, while running in real time on modest onboard compute. The work demonstrates that tightly coupling egocentric vision with memory and control can produce agile, versatile, and hardware-efficient legged locomotion in challenging terrains.
 
 ## 3. Keywords

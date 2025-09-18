@@ -13,7 +13,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 Robots often misinterpret natural clutter like tall grass and undergrowth as rigid obstacles, causing conservative routes or failures. This paper proposes **Wild Visual Navigation (WVN)**, an **online, self-supervised**, **vision-only** system that rapidly learns **platform-specific traversability** from a short human teleoperation demo. WVN extracts dense semantic cues using **self-supervised ViT (DINO-ViT)** features and compresses computation via **SLIC superpixels**, then couples two lightweight MLP heads: one that regresses traversability and another that reconstructs features to estimate **confidence/anomaly**. A **Supervision Graph** records recent footprints and a **Mission Graph** stores features; reprojection from the footprint generates sparse labels continuously, enabling on-the-fly learning. WVN integrates with a local mapping pipeline that raycasts image-space traversability into a 2.5D elevation map and uses an SDF-based local planner to command motion. On an ANYmal quadruped, WVN adapts within minutes and supports closed-loop navigation in forests, parks, and grasslands, including **1.4 km** autonomous footpath following with minor interventions. Compared to purely geometric methods, WVN correctly treats high grass as traversable when appropriate, improving path quality. While demonstrated on legged hardware, the approach generalizes to other ground robots.
 
 ## 3. Keywords

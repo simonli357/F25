@@ -17,7 +17,7 @@
 ```
  
 
-## 2. **Clear Abstract** (150–200 words)
+## 2. **Clear Abstract** 
 TerrainNet is a camera-only terrain perception system for fast off-road navigation where both semantics (e.g., dirt, grass, bushes) and 3-D geometry (slopes, overhangs) drive safety. The model ingests multi-view RGB with optional stereo depth, completes and corrects depth, and back-projects per-pixel features into 3-D. A differentiable "soft-quantized" splat aggregates these features into a gravity-aligned bird's-eye-view (BEV) grid. A light decoder with multi-head outputs then produces semantic maps and layered elevation maps (minimum/maximum ground and ceiling). The outputs can be converted into a terrain-aware costmap and used by a planner. Experiments show higher semantic accuracy and lower elevation error than popular BEV baselines while running an order of magnitude faster. The authors also demonstrate planning with MPPI and a real-world autonomous run in challenging snow, validating that the representation is actionable. Overall, TerrainNet provides a practical, real-time alternative to LiDAR-centric mapping by coupling depth completion, efficient BEV projection, and multi-layer terrain decoding to support high-speed off-road driving. 
 
 ## 3. **Keywords**

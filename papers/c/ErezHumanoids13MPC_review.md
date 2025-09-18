@@ -14,7 +14,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 The paper presents a full-body model-predictive control (MPC) system that runs in real time on a humanoid robot. The approach relies on fast, differentiable dynamics provided by MuJoCo and an iterative LQG trajectory optimizer that replans from the current state every few tens of milliseconds. Tasks are specified through a modular cost-function framework built from residuals and smooth norms; a human operator can mix or switch these costs at runtime. A lightweight state machine transitions between costs to compose complex behaviors (e.g., steps of a gait, getting up, entering a car). State estimation combines IMU signals with a no-slip prior for contacting limbs. Using a parallelized rollout/finite-difference pipeline on a 16-core machine, the controller plans ~0.5 s into the future with policy lags on the order of tens of milliseconds while commanding the robot at 1 kHz. The authors demonstrate locomotion, manipulation, and vehicle entry on the simulated Atlas platform from the DARPA Virtual Robotics Challenge, highlighting robustness to model mismatch, and discuss design trade-offs between horizon length, timing variability from contact, and cost specificity needed for real-time performance.
 
 ## 3. Keywords

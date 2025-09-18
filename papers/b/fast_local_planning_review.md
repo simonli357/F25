@@ -15,7 +15,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 
 This paper presents a fast, online local mapping and planning system for unmanned ground vehicles operating in unknown, off-road environments. The mapping stack fuses wheel odometry and GPS/IMU with a 32-beam LiDAR to build a local, wrapping grid map (≈50 m radius at 0.2 m resolution). From LiDAR, the method maintains min/max height per cell, marks obstacles when vertical extent exceeds a threshold (0.5 m), and computes a terrain gradient map; a normalized convolution fills holes. These layers are merged into a simple, adaptable cost map at 10 Hz. Planning proceeds in two tiers: (1) an 8-connected A* search (5 Hz) over the local cost map provides a coarse path; (2) a trajectory sampler then generates ~1000 kinematically feasible motion candidates by sweeping angular rates and segment times across a short horizon (T≈3 s), scoring them by map cost, curvature penalty, distance-to-goal, and heading error. The lowest-cost feasible trajectory is issued to an ILQR-based controller at 30 Hz. Experiments on a Clearpath Warthog at the Texas A&M RELLIS campus demonstrate real-time operation at 3–4 m/s (vehicle top speed 4.5 m/s), weaving through cones and along brush-lined trails. The approach prioritizes speed and practicality, trading formal optimality for robust, feasible paths that adapt online.
 

@@ -15,7 +15,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 
 Accurately predicting how an off-road robot will move is difficult because terrain, traction, and vegetation interact in complex ways and sensors can fail or be unreliable. This paper proposes a **Multimodal Recurrent State-Space Model (MRSSM)** that learns robot dynamics from **vision, LiDAR, and proprioception** and remains robust when some modalities are missing at test time. The method combines a recurrent state-space model (for long-horizon prediction) with a **multimodal variational autoencoder** fused via a **product-of-experts**. A new training objective extends the ELBO so the model learns to reconstruct and predict **held-out modalities**, improving performance under modality dropouts. In simulation with controlled friction changes, the model uses vision to anticipate traction shifts and reduces position error during terrain transitions. On a challenging real-world forest dataset (17 trajectories), the model predicts future pose over multi-second horizons and **outperforms baseline** dynamics predictors, including when only vision or only proprioception is available. Results highlight the value of leveraging multiple sensors for off-road dynamics modeling and suggest that such models could enable planning and control that account for terrain-induced dynamics without manual terrain labels.
 

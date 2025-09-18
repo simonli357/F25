@@ -16,7 +16,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 This paper presents a real-time method for estimating how traversable terrain is **in multiple directions**—important in unstructured environments where uphill vs. downhill, or along vs. across a narrow path, differ significantly. The authors first learn a **uni-directional** traversability classifier (UniTraT) entirely from simulation via self-supervision: a ground robot is placed and driven over many 2.5D elevation maps, and safety/feasibility rules convert robot motion and pose into labels. They then **distill** this knowledge into a **multi-directional** CNN (MultiTCNN) using their Uni-to-Multi Traversability Distillation (UMTraDistill). MultiTCNN takes gradient-encoded elevation inputs and outputs eight directional traversability probabilities per cell, or a full multi-directional traversability map (MTraMap) over an area. On their dataset, UniTraT reaches ~89% accuracy; MultiTCNN is within 1.8% of that while running in real time (e.g., 74 fps for a 10 m × 10 m map on Jetson AGX Orin). Field trials on a wheeled UGV with LiDAR-based elevation mapping show clear anisotropic behavior: downhill vs. uphill on steep slopes, and alignment along narrow paths. The approach highlights safe, direction-aware navigation cues suitable for planners in challenging outdoor settings.
 
 ## 3. Keywords

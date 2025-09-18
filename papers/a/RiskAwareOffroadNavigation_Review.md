@@ -14,7 +14,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 
 This paper proposes a traversability representation that models how fast a robot can move through off‑road terrain as a **distribution of achievable speeds** conditioned on semantic context and commanded speed. Rather than treating terrain classes (e.g., grass, bush) as uniformly traversable, the method learns a speed probability mass function (PMF) from data gathered while driving, capturing multi‑modal outcomes such as “free roll” versus “stuck.” The learned distribution is converted into a multi‑layer **speed map** and summarized for planning by a convex combination of the distribution’s **mean** and its **Conditional Value at Risk (CVaR)**, enabling intuitive, tunable risk sensitivity without retraining. The map plugs into a minimum‑time planner using **Model Predictive Path Integral (MPPI)** control. Experiments include a controlled grid‑world and an off‑road Unity simulation with a Clearpath Warthog in a full autonomy stack. Results show improved navigation reliability and reduced time‑to‑goal compared with risk‑unaware baselines; risk tuning trades average speed for higher success rates. The approach provides an interpretable, unit‑consistent (m/s) layer that bridges semantic perception and risk‑aware planning, and it is computationally lightweight enough for real‑time deployment with modest CPU resources.
 

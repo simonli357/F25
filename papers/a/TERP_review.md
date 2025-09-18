@@ -14,7 +14,7 @@
 }
 ```
 
-## 2. Clear Abstract (150–200 words)
+## 2. Clear Abstract 
 The paper presents **TERP**, a hybrid navigation framework for ground robots operating on uneven outdoor terrain. TERP builds a local **elevation map** from LiDAR, then uses a deep reinforcement learning network with **Convolutional Block Attention Modules (CBAM)** to extract an **attention mask** that highlights reduced-stability regions given the robot’s pose and goal. This attention is fused with the normalized elevation map to form a **navigation cost map** that encodes a measure of terrain planarity and likely stability (roll/pitch safety). TERP then computes **locally least-cost waypoints** with Dijkstra search over the cost map and follows them with **DWA-RL**, a controller that enforces kinodynamic feasibility and collision avoidance. Unlike end-to-end DRL policies that directly output velocities, TERP **decouples perception from control**, improving transfer from simulation to real robots and providing local optimality guarantees on waypoints. In high-elevation and curb scenarios, TERP increases success rates and reduces elevation-gradient exposure relative to DWA, ego-graph baselines, and an end-to-end Attn-DRL policy. The authors demonstrate real-time performance (10–12.5 Hz) and successful deployment on a Clearpath Husky with a Velodyne VLP-16 LiDAR in real outdoor environments.
 
 ## 3. Keywords
